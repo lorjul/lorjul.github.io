@@ -1,4 +1,4 @@
-/* Modified version of https://nvlabs.github.io/stylegan3/ */
+/* Lightly modified version of https://nvlabs.github.io/stylegan3/ */
 
 :root {
     --small-thumb-border-radius: 2px;
@@ -37,6 +37,10 @@ body {
     grid-column-gap: 8px;
 }
 
+.grid {
+    display: grid;
+    grid-column-gap: 8px;
+}
 
 @media(min-width: 768px) {
     .base-grid,
@@ -329,7 +333,17 @@ img.dropshadow {
     height: 100%;
 }
 
-
+@media(min-width: 1180px) {
+    .download-section {
+        display: grid;
+        grid-template-areas: "thumb links";
+    }
+    .download-thumb {
+        display: block;
+        height: 25rem;
+        margin-left: 1rem;
+    }
+}
 
 
 /* For BibTeX */
