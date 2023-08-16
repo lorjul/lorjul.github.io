@@ -32,7 +32,7 @@ body {
 .n-article,
 .n-footer {
     display: grid;
-    justify-items: stretch;
+    justify-items: normal;
     grid-template-columns: [screen-start] 8px [page-start kicker-start text-start gutter-start middle-start] 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr [text-end page-end gutter-end kicker-end middle-end] 8px [screen-end];
     grid-column-gap: 8px;
 }
@@ -50,7 +50,7 @@ body {
     .n-article,
     .n-footer {
         display: grid;
-        justify-items: stretch;
+        justify-items: normal;
         grid-template-columns: [screen-start] 1fr [page-start kicker-start middle-start text-start] 45px 45px 45px 45px 45px 45px 45px 45px [ kicker-end text-end gutter-start] 45px [middle-end] 45px [page-end gutter-end] 1fr [screen-end];
         grid-column-gap: 16px;
     }
@@ -67,7 +67,7 @@ body {
     .n-article,
     .n-footer {
         display: grid;
-        justify-items: stretch;
+        justify-items: normal;
         grid-template-columns: [screen-start] 1fr [page-start kicker-start] 50px [middle-start] 50px [text-start kicker-end] 50px 50px 50px 50px 50px 50px 50px 50px [text-end gutter-start] 50px [middle-end] 50px [page-end gutter-end] 1fr [screen-end];
         grid-column-gap: 16px;
     }
@@ -84,13 +84,17 @@ body {
     .n-article,
     .n-footer {
         display: grid;
-        justify-items: stretch;
+        justify-items: normal;
         grid-template-columns: [screen-start] 1fr [page-start kicker-start] 60px [middle-start] 60px [text-start kicker-end] 60px 60px 60px 60px 60px 60px 60px 60px [text-end gutter-start] 60px [middle-end] 60px [page-end gutter-end] 1fr [screen-end];
         grid-column-gap: 32px;
     }
     .grid {
         grid-column-gap: 32px;
     }
+}
+
+img {
+    width: 100%;
 }
 
 .base-grid {
@@ -291,9 +295,6 @@ ul.authors.affiliations li {
 
 .authors-affiliations-gap {
     width: 100%;
-    height: 0%;
-    margin: 0;
-    border: 0;
     margin-bottom: .4rem;
 }
 
@@ -307,11 +308,6 @@ ul.authors.affiliations li {
 .download-section {
     display: grid;
     grid-template-areas: "links";
-}
-
-.download-section h4 {
-    margin-left: 2.5rem;
-    display: block;
 }
 
 .download-thumb {
@@ -330,7 +326,8 @@ ul.authors.affiliations li {
 
 img.dropshadow {
     box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
-    height: 100%;
+    height: 90%;
+    width: auto;
 }
 
 @media(min-width: 1180px) {
