@@ -25,7 +25,98 @@
         </div>
 
         <div class="n-article">
-            <p>Work in progress</p>
+            <!-- teaser -->
+            <!-- <img src="images/teaser.png" /> -->
+
+            <!-- abstract -->
+            <h2 id="abstract"> Abstract </h2>
+            <p>
+                Scene graph generation has emerged as a prominent research field in computer vision, witnessing significant advancements in the recent years.
+                However, despite these strides, precise and thorough definitions for the metrics used to evaluate scene graph generation models are lacking.
+                In this paper, we address this gap in the literature by providing a review and precise definition of commonly used metrics in scene graph generation. Our comprehensive examination clarifies the underlying principles of these metrics and can serve as a reference or introduction to scene graph metrics.
+
+                Furthermore, to facilitate the usage of these metrics, we introduce a standalone Python package called SGBench that efficiently implements all defined metrics, ensuring their accessibility to the research community.
+                Additionally, we present a scene graph benchmarking web service, that enables researchers to compare scene graph generation methods and increase visibility of new methods in a central place.
+            </p>
+
+            <!-- paper links -->
+            <h2 id="links"> Links </h2>
+            <div class="grid download-section">
+                <div class="download-thumb">
+                    <a href="/" target="_blank">
+                        <img class="dropshadow" src="images/paper_preview.png" />
+                    </a>
+                </div>
+                <div class="download-links">
+                    <ul>
+                        <li>
+                            <a href=""> Paper PDF: Coming soon</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/lorjul/sgbench">Code on GitHub: Coming soon</a>
+                        </li>
+                        <li>
+                            <a href="">Benchmarking Server: Coming soon</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <h2>Contributions</h2>
+            <h3>Precise Definitions of Scene Graph Metrics</h3>
+            <p>
+                We rigorously define the following scene graph metrics using pseudo code and equations:
+            </p>
+            <ul>
+                <li>Recall@k</li>
+                <li>Mean Recall@k</li>
+                <li>Pair Recall@k</li>
+                <li>No Graph Constraint Recall@k</li>
+                <li>Mean No Graph Constraint Recall@k</li>
+                <li>Instance Recall</li>
+                <li>Predicate Rank</li>
+            </ul>
+
+
+            <h3>Python Package</h3>
+            <p>
+                The code to calculate the described metrics is bundled as an easy to install pip package. It has only four dependencies in total and should work with any big framework you are currently using.
+            </p>
+            <p>
+                You can install the python package using
+            </p>
+            <pre><code>
+    pip install sgbench
+            </code></pre>
+            <p>The source code will be made available here: <a href="https://github.com/lorjul/sgbench">https://github.com/lorjul/sgbench</a></p>
+            
+
+            <h3>Benchmarking Server</h3>
+            <p>
+                To compare recent scene graph methods, we developed a benchmarking server where users can upload scene graph evaluation files.
+            </p>
+            <img src="images/server-screenshot.png" />
+            <!-- <p>
+                A comparison between our three novel metrics (P-AUC, PDD and PDO) and the traditionally used R@50 metric. The R@50 metric results in 0.0 for most predicates, while our metrics accurately measure the performance of each predicate.
+            </p> -->
+            
+
+            <!--
+            <h2 id="citation"> Citation </h2>
+            <pre><code>
+
+            </code></pre>
+            -->
+
+
+
+            <h2 id="license"> License </h2>
+            <p> 
+                The structure of this page is taken and modified from <a href="https://nvlabs.github.io/eg3d/">nvlabs.github.io/eg3d</a> which was published under the
+                <a href="https://nvlabs-fi-cdn.nvidia.com/_web/stylegan3/LICENSE.txt"> Creative Commons CC BY-NC 4.0
+                license </a>. 
+            </p>
+
         </div>
     </body>
 </html>
