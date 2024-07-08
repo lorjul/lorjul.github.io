@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <!-- <meta name="description" content="DESCRIPTION META TAG"> -->
+  <!-- <meta property="og:title" content="SOCIAL MEDIA TITLE TAG" /> -->
+  <!-- <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG" /> -->
+  <!-- <meta property="og:url" content="URL OF THE WEBSITE" /> -->
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <!-- <meta property="og:image" content="static/image/your_banner_image.png" /> -->
+  <!-- <meta property="og:image:width" content="1200" /> -->
+  <!-- <meta property="og:image:height" content="630" /> -->
+
+
+  <!-- <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG"> -->
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <!-- <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image"> -->
+  <!-- Keywords for your paper to be indexed by-->
+  <!-- <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>A Fair Ranking and New Model for Panoptic Scene Graph Generation</title>
+  <!-- <link rel="icon" type="image/x-icon" href="static/images/favicon.ico"> -->
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <!-- <link rel="stylesheet" href="static/css/bulma-carousel.min.css"> -->
+  <!-- <link rel="stylesheet" href="static/css/bulma-slider.min.css"> -->
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <!-- <script src="static/js/bulma-carousel.min.js"></script> -->
+  <!-- <script src="static/js/bulma-slider.min.js"></script> -->
+  <script src="static/js/index.js"></script>
+</head>
+
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">A Fair Ranking and New Model for Panoptic Scene Graph Generation</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://www.uni-augsburg.de/de/fakultaet/fai/informatik/prof/mmc/team/lorenz/" target="_blank">Julian Lorenz</a>,</span>
+              <span class="author-block">
+                <a class="author-no-link">Alexander Pest</a>,</span>
+              <span class="author-block">
+                <a href="https://www.uni-augsburg.de/de/fakultaet/fai/informatik/prof/mmc/team/kienzle/" target="_blank">Daniel Kienzle</a>,</span>
+              <span class="author-block">
+                <a href="https://www.uni-augsburg.de/de/fakultaet/fai/informatik/prof/mmc/team/ludwig/" target="_blank">Katja Ludwig</a>,</span>
+              <span class="author-block">
+                <a href="https://www.uni-augsburg.de/de/fakultaet/fai/informatik/prof/mmc/team/lienhart/" target="_blank">Rainer Lienhart</a>
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">University of Augsburg<br>ECCV 2024</span>
+              <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- Arxiv PDF link -->
+                <!-- <span class="link-block">
+                  <a href="#" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span> -->
+
+                <!-- Supplementary PDF link -->
+                <!-- <span class="link-block">
+                  <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Supplementary</span>
+                  </a>
+                </span> -->
+
+                <!-- Github link -->
+                <span class="link-block">
+                  <a href="https://github.com/lorjul/fair-psgg" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- ArXiv abstract Link -->
+                <!-- <span class="link-block">
+                  <a href="#>" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Paper abstract -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              In panoptic scene graph generation (PSGG), models retrieve interactions between objects in an image which are grounded by panoptic segmentation masks.
+              Previous evaluations on panoptic scene graphs have been subject to an erroneous evaluation protocol where multiple masks for the same object can lead to multiple relation distributions per mask-mask pair. This can be exploited to increase the final score. We correct this flaw and provide a fair ranking over a wide range of existing PSGG models.
+              The observed scores for existing methods increase by up to 7.4 mR@50 for all two-stage methods, while dropping by up to 19.3 mR@50 for all one-stage methods, highlighting the importance of a correct evaluation. Contrary to recent publications, we show that existing two-stage methods are competitive to one-stage methods. Building on this, we introduce the Decoupled SceneFormer (DSFormer), a novel two-stage model that outperforms all existing scene graph models by a large margin of +11 mR@50 and +10 mNgR@50 on the corrected evaluation, thus setting a new SOTA. As a core design principle, DSFormer encodes subject and object masks directly into feature space.            
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End paper abstract -->
+
+  <section class="section hero is-small">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-full">
+          <div class="content">
+            <h2 class="title is-3">Problems With Evaluating Panoptic Scene Graphs</h2>
+            <div class="level-set has-text-justified">
+              <p>
+                Our research identified a significant flaw in the current evaluation protocol for scene graph generation models. When evaluating a scene graph model, existing works did not always enforce a single predicted mask per subject/object and a single predicate distribution per subject-object pair.<br>
+                Consequently, models that output multiple masks or predicate distributions are at an unfair advantage over models that don't.
+              </p>
+            </div>
+            <img style="display: block; margin-left: auto; margin-right: auto; margin-top: 1em; margin-bottom: 1em;" src="static/images/24eccv-overlap.svg" alt="" class="center-image">
+            <div class="level-set has-text-justified">
+              <p>
+                The figure above shows a schematic comparison of the output from existing one-stage methods to our proposed two-stage method. One-stage methods often output multiple masks per real world object, visualized with colored masks in <strong>B</strong>. This results in one predicate score distribution per mask-mask pair but multiple distributions for pairs that share the same ground truth subject and object. In current evaluation implementations, multiple masks or relations are not aggregated and can therefore be exploited to increase <i>mR@k</i> scores. Our new method does not have this flaw.
+              </p>
+              <p>The effect of an unfair evaluation can be seen below:</p>
+            </div>
+            <img style="display: block; margin-left: auto; margin-right: auto; margin-top: 1em; margin-bottom: 1em;" src="static/images/after-fix.svg" alt="" class="center-image">
+            
+            <div class="level-set has-text-justified">
+              <p>
+                The figure above shows a comparison of achieved <i>mR@50</i> scores with: <span style="color: #66c2a5">(1)</span> original flawed <i>MultiMPO</i> values, <span style="color: #8da0cb">(2)</span> an exploit to improve <i>MultiMPO</i> scores that uses a better mask model for two-stage  methods, and <span style="color: #d95f02">(3)</span> our newly introduced fair <i>SingleMPO</i>.
+                Even though all methods are evaluated equally, <i>mR@50</i> scores for all one-stage methods decline with a maximum decrease of 19.3 for <i>SingleMPO</i>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section hero is-small">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-full">
+          <div class="content">
+            <h2 class="title is-3">DSFormer Architecture</h2>
+            <div class="level-set has-text-justified">
+              <p>
+                Recent work pivoted to using one-stage architectures for panoptic scene graph generation. However, we are confident that a pure segmentation model is unlikely to be outperformed by a scene graph model. Therefore, we devise a new scene graph architecture that is not trained end-to-end but receives subject and object masks as input.<br>
+                For a given subject-object prompt, DSFormer encodes the location as an additional positional encoding to each patch token in feature space.
+              </p>
+            </div>
+            <img style="display: block; margin-left: auto; margin-right: auto; margin-top: 1em;" src="static/images/24eccv-arch-zoom.svg" alt="Normal and Anomalous Representations" class="center-image">
+
+            <div style="margin-top: 1em; margin-bottom: 1em;" class="level-set has-text-justified">
+              <p>
+                Evaluation results are shown below. The <i>original MultiMPO</i> column shows the originally published values.
+              </p>
+            </div>
+
+            <table>
+              <thead>
+                <tr>
+                  <th></th>
+                  <th colspan="3">Predicate Classification &uarr;</th>
+                  <th colspan="4">Scene Graph Generation &uarr;</th>
+                </tr>
+                <tr>
+                  <th>Method</th>
+                  <th>mR@20</th>
+                  <th>mR@50</th>
+                  <th>mNgR@50</th>
+                  <th>mR@20</th>
+                  <th>mR@50</th>
+                  <th>mNgR@50</th>
+                  <th>original MultiMPO</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>IMP</td>
+                  <td>11.25</td>
+                  <td>12.72</td>
+                  <td>27.58</td>
+                  <td>8.81</td>
+                  <td>9.78</td>
+                  <td>21.73</td>
+                  <td>7.88</td>
+                </tr>
+                <tr>
+                  <td>MOTIFS</td>
+                  <td>20.00</td>
+                  <td>21.83</td>
+                  <td>47.98</td>
+                  <td>15.10</td>
+                  <td>16.32</td>
+                  <td>37.96</td>
+                  <td>10.10</td>
+                </tr>
+                <tr>
+                  <td>GPS-Net</td>
+                  <td>15.46</td>
+                  <td>18.62</td>
+                  <td>33.60</td>
+                  <td>12.35</td>
+                  <td>14.48</td>
+                  <td>27.14</td>
+                  <td>7.49</td>
+                </tr>
+                <tr>
+                  <td>VCTree</td>
+                  <td>21.19</td>
+                  <td>23.07</td>
+                  <td>50.24</td>
+                  <td>16.29</td>
+                  <td>17.58</td>
+                  <td>39.41</td>
+                  <td>10.20</td>
+                </tr>
+                <tr>
+                  <td>PSGTR</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>10.93</td>
+                  <td>11.62</td>
+                  <td>27.57</td>
+                  <td>20.80</td>
+                </tr>
+                <tr>
+                  <td>PSGFormer</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>8.20</td>
+                  <td>8.20</td>
+                  <td>21.75</td>
+                  <td>18.30</td>
+                </tr>
+                <tr>
+                  <td>Pair-Net</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>18.02</td>
+                  <td>19.64</td>
+                  <td>21.48</td>
+                  <td>28.50</td>
+                </tr>
+                <tr>
+                  <td>HiLo</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>17.51</td>
+                  <td>18.33</td>
+                  <td>40.48</td>
+                  <td>37.60</td>
+                </tr>
+                <tr>
+                  <td><b>Ours</b></td>
+                  <td><b>34.03</b></td>
+                  <td><b>40.06</b></td>
+                  <td><b>64.05</b></td>
+                  <td><b>27.20</b></td>
+                  <td><b>30.67</b></td>
+                  <td><b>50.08</b></td>
+                  <td><b>(50.08)</b></td>
+                </tr>
+              </tbody>
+            </table>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Paper poster -->
+  <!-- <section class="hero is-small is-light">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title">Poster</h2>
+
+        <iframe src="static/pdfs/sample.pdf" width="100%" height="550">
+        </iframe>
+
+      </div>
+    </div>
+  </section> -->
+  <!--End paper poster -->
+
+
+  <!--BibTex citation -->
+  <!-- <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>BibTex Code Here</code></pre>
+    </div>
+  </section> -->
+  <!--End BibTex citation -->
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                target="_blank">Academic Project Page Template</a> which was adopted from the <a
+                href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+              You are free to borrow the source code of this website, we just ask that you link back to this page in the footer.
+              <br> This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+<!-- Default Statcounter code for fair psgg https://lorjul.github.io/fair-psgg/
+-->
+<!-- <script type="text/javascript">
+  var sc_project=13016289; 
+  var sc_invisible=1; 
+  var sc_security="f02f557d"; 
+  </script>
+  <script type="text/javascript"
+  src="https://www.statcounter.com/counter/counter.js" async></script>
+  <noscript><div class="statcounter"><a title="free web stats"
+  href="https://statcounter.com/" target="_blank"><img class="statcounter"
+  src="https://c.statcounter.com/13016289/0/f02f557d/1/" alt="free web stats"
+  referrerPolicy="no-referrer-when-downgrade"></a></div></noscript> -->
+  <!-- End of Statcounter Code -->
+
+</body>
+
+</html>
