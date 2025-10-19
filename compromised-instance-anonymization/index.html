@@ -141,31 +141,15 @@
   </section>
   <!-- End paper abstract -->
 
-  <!-- <section class="section hero is-small">
+  <section class="section hero is-small">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column is-full">
           <div class="content">
-            <h2 class="title is-3">Problems With Evaluating Panoptic Scene Graphs</h2>
+            <!-- <h2 class="title is-3">Problems With Evaluating Panoptic Scene Graphs</h2> -->
             <div class="level-set has-text-justified">
               <p>
-                Our research identified a significant flaw in the current evaluation protocol for scene graph generation models. When evaluating a scene graph model, existing works did not always enforce a single predicted mask per subject/object and a single predicate distribution per subject-object pair.<br>
-                Consequently, models that output multiple masks or predicate distributions are at an unfair advantage over models that don't.
-              </p>
-            </div>
-            <img style="display: block; margin-left: auto; margin-right: auto; margin-top: 1em; margin-bottom: 1em;" src="static/images/24eccv-overlap.svg" alt="" class="center-image">
-            <div class="level-set has-text-justified">
-              <p>
-                The figure above shows a schematic comparison of the output from existing one-stage methods to our proposed two-stage method. One-stage methods often output multiple masks per real world object, visualized with colored masks in <strong>B</strong>. This results in one predicate score distribution per mask-mask pair but multiple distributions for pairs that share the same ground truth subject and object. In current evaluation implementations, multiple masks or relations are not aggregated and can therefore be exploited to increase <i>mR@k</i> scores. Our new method does not have this flaw.
-              </p>
-              <p>The effect of an unfair evaluation can be seen below:</p>
-            </div>
-            <img style="display: block; margin-left: auto; margin-right: auto; margin-top: 1em; margin-bottom: 1em;" src="static/images/after-fix.svg" alt="" class="center-image">
-            
-            <div class="level-set has-text-justified">
-              <p>
-                The figure above shows a comparison of achieved <i>mR@50</i> scores with: <span style="color: #66c2a5">(1)</span> original flawed <i>MultiMPO</i> values, <span style="color: #8da0cb">(2)</span> an exploit to improve <i>MultiMPO</i> scores that uses a better mask model for two-stage  methods, and <span style="color: #d95f02">(3)</span> our newly introduced fair <i>SingleMPO</i>.
-                Even though all methods are evaluated equally, <i>mR@50</i> scores for all one-stage methods decline with a maximum decrease of 19.3 for <i>SingleMPO</i>.
+                We will update this page with more details in the next days.
               </p>
             </div>
           </div>
@@ -173,144 +157,6 @@
       </div>
     </div>
   </section>
-
-  <section class="section hero is-small">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column is-full">
-          <div class="content">
-            <h2 class="title is-3">DSFormer Architecture</h2>
-            <div class="level-set has-text-justified">
-              <p>
-                Recent work pivoted to using one-stage architectures for panoptic scene graph generation. However, we are confident that a pure segmentation model is unlikely to be outperformed by a scene graph model. Therefore, we devise a new scene graph architecture that is not trained end-to-end but receives subject and object masks as input.<br>
-                For a given subject-object prompt, DSFormer encodes the location as an additional positional encoding to each patch token in feature space.
-              </p>
-            </div>
-            <img style="display: block; margin-left: auto; margin-right: auto; margin-top: 1em;" src="static/images/24eccv-arch-zoom.svg" alt="Normal and Anomalous Representations" class="center-image">
-
-            <div style="margin-top: 1em; margin-bottom: 1em;" class="level-set has-text-justified">
-              <p>
-                Evaluation results are shown below. The <i>original MultiMPO</i> column shows the originally published values.
-              </p>
-            </div>
-
-            <table>
-              <thead>
-                <tr>
-                  <th></th>
-                  <th colspan="3">Predicate Classification &uarr;</th>
-                  <th colspan="4">Scene Graph Generation &uarr;</th>
-                </tr>
-                <tr>
-                  <th>Method</th>
-                  <th>mR@20</th>
-                  <th>mR@50</th>
-                  <th>mNgR@50</th>
-                  <th>mR@20</th>
-                  <th>mR@50</th>
-                  <th>mNgR@50</th>
-                  <th>original MultiMPO</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>IMP</td>
-                  <td>11.25</td>
-                  <td>12.72</td>
-                  <td>27.58</td>
-                  <td>8.81</td>
-                  <td>9.78</td>
-                  <td>21.73</td>
-                  <td>7.88</td>
-                </tr>
-                <tr>
-                  <td>MOTIFS</td>
-                  <td>20.00</td>
-                  <td>21.83</td>
-                  <td>47.98</td>
-                  <td>15.10</td>
-                  <td>16.32</td>
-                  <td>37.96</td>
-                  <td>10.10</td>
-                </tr>
-                <tr>
-                  <td>GPS-Net</td>
-                  <td>15.46</td>
-                  <td>18.62</td>
-                  <td>33.60</td>
-                  <td>12.35</td>
-                  <td>14.48</td>
-                  <td>27.14</td>
-                  <td>7.49</td>
-                </tr>
-                <tr>
-                  <td>VCTree</td>
-                  <td>21.19</td>
-                  <td>23.07</td>
-                  <td>50.24</td>
-                  <td>16.29</td>
-                  <td>17.58</td>
-                  <td>39.41</td>
-                  <td>10.20</td>
-                </tr>
-                <tr>
-                  <td>PSGTR</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>10.93</td>
-                  <td>11.62</td>
-                  <td>27.57</td>
-                  <td>20.80</td>
-                </tr>
-                <tr>
-                  <td>PSGFormer</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>8.20</td>
-                  <td>8.20</td>
-                  <td>21.75</td>
-                  <td>18.30</td>
-                </tr>
-                <tr>
-                  <td>Pair-Net</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>18.02</td>
-                  <td>19.64</td>
-                  <td>21.48</td>
-                  <td>28.50</td>
-                </tr>
-                <tr>
-                  <td>HiLo</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>17.51</td>
-                  <td>18.33</td>
-                  <td>40.48</td>
-                  <td>37.60</td>
-                </tr>
-                <tr>
-                  <td><b>Ours</b></td>
-                  <td><b>34.03</b></td>
-                  <td><b>40.06</b></td>
-                  <td><b>64.05</b></td>
-                  <td><b>27.20</b></td>
-                  <td><b>30.67</b></td>
-                  <td><b>50.08</b></td>
-                  <td><b>(50.08)</b></td>
-                </tr>
-              </tbody>
-            </table>
-            
-          </div>
-        </div>
-      </div>
-    </div>
-  </section> -->
 
   <!-- Paper poster -->
   <!-- <section class="hero is-small is-light">
